@@ -1,26 +1,14 @@
-let contador = 1;
-let pais
-let nombre
-let apellido
-let edad
-let hobbie
-do {
-    if(contador=1)
-        nombre = prompt("cual es su nombre")
-        contador++;
-    if(contador=2)
-        apellido = prompt("cual es su apellido")
-        contador++;
-    if(contador=3)
-        edad = prompt("cual es su edad")
-        contador++
-    if(contador=4)
-        pais = prompt("cual es su pais de origen")
-        contador++;
-    if(contador=5)
-        hobbie = prompt("cual es su hobbie")
-        contador++;
 
-} while (contador <= 5)
+let salir = prompt("Para salir escriba s")
+edad = 0;
+contador = 0
 
-console.log(contador + "proceso terminado");
+do{
+    edad2 = parseInt(prompt("Ingrese edad"))
+    
+    edad = edad + edad2;
+    contador++;
+    salir = prompt("Para dejar de ingresar edades escriba s")
+}while( salir != "s")
+promedio = edad/contador;
+alert("Promedio de edades : "+promedio + " años")
