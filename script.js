@@ -1,14 +1,26 @@
+function Persona (usuario, clave ,){
+    this.usuario = usuario;
+    this.clave = clave;
+}
 
-let salir = prompt("Para salir escriba s")
-edad = 0;
-contador = 0
+let salir = 0;
 
-do{
-    edad2 = parseInt(prompt("Ingrese edad"))
-    
-    edad = edad + edad2;
-    contador++;
-    salir = prompt("Para dejar de ingresar edades escriba s")
-}while( salir != "s")
-promedio = edad/contador;
-alert("Promedio de edades : "+promedio + " años")
+const array = [];
+
+while (salir != 1){
+    let usuario = prompt ("ingrese el usuario")
+    console.log(usuario)
+    let clave = prompt ("ingrese la clave")
+    console.log(clave)
+
+    const persona1 = new Persona (usuario, clave);
+
+    array.push(persona1)
+
+    console.log(array.toString());
+    console.log(array.length);
+
+    salir = prompt("desea salir escriba 1")
+}
+
+
